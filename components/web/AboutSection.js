@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ButtonLink from "./ButtonLink";
 
 export default function AboutSection() {
   return (
@@ -31,13 +32,12 @@ export default function AboutSection() {
             dengan client dan hasikan content yang original untuk memenangkan
             hati audiens.
           </p>
-          <Link href="/">
-            <a>
-              <button className="bg-black text-white rounded-sm py-2 px-3 md:py-3 md:px-5 text-xs md:text-lg mt-3 md:mt-5 hover:bg-gray-300 hover:text-black transition-all duration-500">
-                registrasi gratis
-              </button>
-            </a>
-          </Link>
+          <ButtonLink
+            link="/register"
+            className="py-2 px-3 md:py-3 md:px-5 text-xs md:text-lg mt-3 md:mt-5 rounded-sm"
+          >
+            registrasi gratis
+          </ButtonLink>
         </div>
       </section>
     </>

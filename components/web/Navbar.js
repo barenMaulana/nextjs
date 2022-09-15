@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import ButtonLink from "./ButtonLink";
 
 export default function Navbar() {
   const burger = useRef();
@@ -41,9 +42,9 @@ export default function Navbar() {
           </a>
         </Link>
         <div>
-          <Link href="/services">
+          <Link href="/blogs">
             <a>
-              <span className="px-3 hover:text-gray-500">services</span>
+              <span className="px-3 hover:text-gray-500">blogs</span>
             </a>
           </Link>
           <Link href="/about">
@@ -57,21 +58,19 @@ export default function Navbar() {
             </a>
           </Link>
         </div>
-        <div>
-          <Link href="/">
-            <a>
-              <button className="bg-black text-white rounded-sm py-1 px-3 mr-2 text-sm">
-                Login
-              </button>
-            </a>
-          </Link>
-          <Link href="/">
-            <a>
-              <button className="bg-black text-white rounded-sm py-1 px-3 text-sm">
-                Register
-              </button>
-            </a>
-          </Link>
+        <div className="">
+          <ButtonLink
+            link="/login"
+            className="rounded-sm py-2 px-3 md:py-1 md:px-5 text-xs md:text-sm"
+          >
+            Login
+          </ButtonLink>
+          <ButtonLink
+            link="/register"
+            className="ml-2 rounded-sm py-2 px-3 md:py-1 md:px-5 text-xs md:text-sm"
+          >
+            Register
+          </ButtonLink>
         </div>
       </nav>
 
@@ -98,14 +97,14 @@ export default function Navbar() {
       </nav>
       <div ref={mobile_menu} className="mobile-navbar shadow">
         <div className="flex flex-col pt-5">
-          <Link href="/services">
-            <a>
-              <span className="px-3 hover:text-gray-500">services</span>
-            </a>
-          </Link>
           <Link href="/about">
             <a>
               <span className="px-3 hover:text-gray-500">about</span>
+            </a>
+          </Link>
+          <Link href="/blogs">
+            <a>
+              <span className="px-3 hover:text-gray-500">blogs</span>
             </a>
           </Link>
           <Link href="/case-studies">
@@ -115,20 +114,18 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="ml-2 mt-5">
-          <Link href="/">
-            <a>
-              <button className="bg-black text-white rounded-sm py-1 px-3 mr-2 text-sm">
-                Login
-              </button>
-            </a>
-          </Link>
-          <Link href="/">
-            <a>
-              <button className="bg-black text-white rounded-sm py-1 px-3 text-sm">
-                Register
-              </button>
-            </a>
-          </Link>
+          <ButtonLink
+            link="/login"
+            className="rounded-sm py-2 px-3 md:py-1 md:px-5 text-xs md:text-sm"
+          >
+            Login
+          </ButtonLink>
+          <ButtonLink
+            link="/register"
+            className="ml-2 ml-2 rounded-sm py-2 px-3 md:py-1 md:px-5 text-xs md:text-sm"
+          >
+            Register
+          </ButtonLink>
         </div>
       </div>
     </>

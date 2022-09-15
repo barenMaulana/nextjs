@@ -1,8 +1,10 @@
 import Head from "next/head";
 import AboutSection from "../components/web/AboutSection";
+import ButtonLink from "../components/web/ButtonLink";
 import Footer from "../components/web/Footer";
 import Header from "../components/web/Header";
 import Navbar from "../components/web/Navbar";
+import TestimonialSection from "../components/web/TestimonialSection";
 import TopAlert from "../components/web/TopAlert";
 
 export default function Home() {
@@ -15,8 +17,9 @@ export default function Home() {
       </Head>
       <TopAlert />
       <Navbar />
-      <Header />
+      <Header headerTitle="Influencer Marketing Berawal Dari Sini" />
       <AboutSection />
+      <TestimonialSection />
       <Footer />
     </div>
   );
